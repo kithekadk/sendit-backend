@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const parcelController_1 = require("../controller/parcelController");
+const parcelRouter = (0, express_1.Router)();
+parcelRouter.post('/create', parcelController_1.createParcel);
+parcelRouter.get('/allparcels', parcelController_1.fetchParcels);
+parcelRouter.delete('/delete/:parcelID', parcelController_1.deleteParcels);
+parcelRouter.put('/update/:parcelID', parcelController_1.updateParcel);
+parcelRouter.put('/updateStatus/:parcelID', parcelController_1.updateParcelStatus);
+exports.default = parcelRouter;

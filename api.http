@@ -1,0 +1,121 @@
+POST http://localhost:4400/user/create
+Content-Type: application/json
+
+{
+    "fullName":"Jonathan",
+    "userName":"Jonathan123",
+    "email":"jonathanndambuki116@gmail.com",
+    "phoneNumber":12345678,
+    "password":"12345678"
+}
+
+###
+POST http://localhost:4400/user/login
+Content-Type: application/json
+
+{
+    "email":"kakinyidk2345@gmail.com", 
+    "password":"12345678"
+}
+
+###
+GET http://localhost:4400/user/getUsers
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJRCI6MiwiZnVsbE5hbWUiOiJEYW5pZWwgSyIsInVzZXJOYW1lIjoiRGFuaWVsIiwiZW1haWwiOiJrYWtpbnlpZGtAZ21haWwuY29tIiwicGhvbmVOdW1iZXIiOiIxMjM0NTY3OCIsImxhdCI6MSwibG5nIjozOCwid2VsY29tZSI6IllFUyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY2MzU5MTg2OCwiZXhwIjoxNjYzNTkyMTY4fQ.3O8JKPBMC9-97xogzKScApfhbdKyr3E3wlCDkuoEbN0
+
+###
+POST http://localhost:4400/parcel/create
+Content-Type: application/json
+
+{
+        "sender":"dk@yopmail.com",
+        "parcelWeight":2,
+        "price":200,
+        "lat":-1.567,
+        "lng":36.45,
+        "senderLat":-1.45,
+        "senderLng":40.45,
+        "parcelDescription":"test",
+        "receiverLocation":"test",
+        "receiverPhone":745244141,
+        "receiverEmail":"jonathan@yopmail.com",
+        "deliveryDate":"22122022"
+}
+
+
+###
+GET http://localhost:4400/parcel/allparcels
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJRCI6MiwiZnVsbE5hbWUiOiJEYW5pZWwgSyIsInVzZXJOYW1lIjoiRGFuaWVsIiwiZW1haWwiOiJrYWtpbnlpZGtAZ21haWwuY29tIiwicGhvbmVOdW1iZXIiOiIxMjM0NTY3OCIsImxhdCI6MSwibG5nIjozOCwid2VsY29tZSI6IllFUyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY2MzU5MjQ4MiwiZXhwIjoxNjYzNTkyNzgyfQ.ySeMF6tn5JiMJTX_tFXw_v9bNH0v_yfoVBFFMfHW1VU
+
+
+###
+GET http://localhost:4400/user/check
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJRCI6MiwiZnVsbE5hbWUiOiJEYW5pZWwgSyIsInVzZXJOYW1lIjoiRGFuaWVsIiwiZW1haWwiOiJrYWtpbnlpZGtAZ21haWwuY29tIiwicGhvbmVOdW1iZXIiOiIxMjM0NTY3OCIsImxhdCI6MSwibG5nIjozOCwid2VsY29tZSI6IllFUyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY2MzU5MTg2OCwiZXhwIjoxNjYzNTkyMTY4fQ.3O8JKPBMC9-97xogzKScApfhbdKyr3E3wlCDkuoEbN0
+
+###
+POST http://localhost:4400/user/setLocation
+Content-Type: application/json
+
+{
+    "email":"kakinyidk1@gmail.com",
+    "lat":12.234,
+    "lng":33.27
+}
+
+###
+DELETE http://localhost:4400/parcel/delete/1011
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJRCI6MiwiZnVsbE5hbWUiOiJEYW5pZWwgSyIsInVzZXJOYW1lIjoiRGFuaWVsIiwiZW1haWwiOiJrYWtpbnlpZGtAZ21haWwuY29tIiwicGhvbmVOdW1iZXIiOiIxMjM0NTY3OCIsImxhdCI6MSwibG5nIjozOCwid2VsY29tZSI6IllFUyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY2MzU5MTg2OCwiZXhwIjoxNjYzNTkyMTY4fQ.3O8JKPBMC9-97xogzKScApfhbdKyr3E3wlCDkuoEbN0
+
+###
+PUT http://localhost:4400/parcel/update/7
+Content-Type: application/json
+
+{       
+        "sender":"xyz@gmail.com",
+        "parcelWeight":3,
+        "price":750,
+        "lat":-1.567,
+        "lng":36.45,
+        "senderLat":-1.45,
+        "senderLng":40.45,
+        "parcelDescription":"Electronics",
+        "receiverLocation":"Nairobi",
+        "receiverPhone":7072441418,
+        "receiverEmail":"abcde@GMAIL.COM",
+        "deliveryDate":"2213321"
+}
+###
+PUT http://localhost:4400/parcel/updateStatus/4023
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRJRCI6MiwiZnVsbE5hbWUiOiJEYW5pZWwgSyIsInVzZXJOYW1lIjoiRGFuaWVsIiwiZW1haWwiOiJrYWtpbnlpZGtAZ21haWwuY29tIiwicGhvbmVOdW1iZXIiOiIxMjM0NTY3OCIsImxhdCI6MSwibG5nIjozOCwid2VsY29tZSI6IllFUyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY2MzU5MjgyMiwiZXhwIjoxNjYzNTkzMTIyfQ.5_mHn1rU6Fmjs3rnlPbbjxT01bCHl0z68uNE2IXTYFM
+
+{
+    "status":"Delivered"
+}
+
+
+###
+PUT http://localhost:4400/user/updateUser
+Content-Type: application/json
+
+{
+    "clientID":25,
+    "fullName":"Updated user",
+    "phoneNumber": 12345678,
+    "password":"12345678",
+    "email":"abcd_254_001@yopmail.com",
+    "userName":"dk123"
+}
+
+###CHANGE PASSWORD
+PUT http://localhost:4400/user/changePassword
+Content-Type: application/json
+
+{
+    "email":"abcd_254_003@yopmail.com",
+    "phoneNumber": 12345678,
+    "password":"12345678"
+}
